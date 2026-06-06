@@ -192,35 +192,11 @@ open_all() {
   printf "\nDone.\n"
 }
 
-menu() {
-  echo
-  printf "${BOLD}Choose preview:${RESET}\n"
-  echo "  1) Full preview"
-  echo "  2) Java"
-  echo "  3) TypeScript"
-  echo "  4) Python"
-  echo "  0) Exit"
-  echo
-  printf "Selection: "
-}
-
-run_choice() {
-  case "$1" in
-    1) full_preview ;;
-    2) header; java_preview ;;
-    3) header; typescript_preview ;;
-    4) header; python_preview ;;
-    0) exit 0 ;;
-    *) echo "Invalid selection." ;;
-  esac
-}
-
 usage() {
   cat <<USAGE
 Codigrate macOS Terminal Theme Preview
 
-  bash theme-preview.sh                 interactive menu
-  bash theme-preview.sh --full          render the full preview in this window
+  bash theme-preview.sh                 render the full preview in this window
   bash theme-preview.sh --open "<name>" open Terminal with a theme + preview
   bash theme-preview.sh --all           step through every theme (for screenshots)
 
@@ -231,18 +207,9 @@ USAGE
 }
 
 case "${1:-}" in
-  --full)  full_preview; exit 0 ;;
   --open)  open_theme "$(find_theme_file "${2:-}")"; exit 0 ;;
   --all)   open_all; exit 0 ;;
   -h|--help) usage; exit 0 ;;
+  --full|"") full_preview; exit 0 ;;
+  *) full_preview; exit 0 ;;
 esac
-
-while true; do
-  header
-  menu
-  read -r choice
-  run_choice "$choice"
-  echo
-  printf "Press Enter to return to menu..."
-  read -r _
-done
