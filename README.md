@@ -5,10 +5,10 @@
 </p>
 
 <h1 align="center">
-Codigrate Themes for macOS Terminal
+Codigrate Themes for MacOS Terminal
 </h1>
 
-A carefully crafted collection of macOS Terminal themes inspired by nature and iconic cities around the world.
+A carefully crafted collection of MacOS Terminal themes inspired by nature and iconic cities around the world.
 Each theme is designed with balance, readability, and long terminal sessions in mind—blending distinctive atmospheres
 with thoughtfully tuned colors that make your terminal feel both elegant and comfortable.
 Whether you prefer calm, light environments or deep, immersive dark palettes,
