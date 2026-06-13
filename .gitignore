@@ -1,3 +1,6 @@
 .DS_Store
 /.idea
 generate-from-jetbrains-themes.js
+
+# sRGB ICC profile used by the (gitignored) generator
+srgb.icc
