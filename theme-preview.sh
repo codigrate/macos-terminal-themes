@@ -160,10 +160,12 @@ open_theme() {
 
   open "$file"
   sleep 1.2
+  # cd into the repo first, so the window title reads "macos-terminal-themes — -zsh — 222×63"
+  # like every screenshot in this repo, then render the preview
   osascript >/dev/null 2>&1 <<OSA
 tell application "Terminal"
   activate
-  do script "clear; bash '$SCRIPT_PATH' --full" in front window
+  do script "cd '$THEMES_ROOT' && clear && bash '$SCRIPT_PATH' --full" in front window
 end tell
 OSA
 }
