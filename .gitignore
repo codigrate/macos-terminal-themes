@@ -9,6 +9,7 @@ generate-from-jetbrains-themes.js
 /nature/reynisfjara-theme/*.terminal
 /nature/salda-theme/*.terminal
 /nature/spring-theme/*.terminal
+/cities/dublin-theme/*.terminal
 /cities/london-theme/*.terminal
 /cities/madrid-theme/*.terminal
 /cities/prague-theme/*.terminal
